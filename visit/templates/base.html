@@ -1,0 +1,29 @@
+{% load vscounter_tag %}
+
+{% vscounter request as vsc %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visit Counter</title>
+</head>
+<body>
+
+
+<h1>Visitors : {{vsc}}</h1>
+<br/>
+<br/>
+<hr/>
+<table>
+    <tr>
+        <th>USER</th>
+    </tr>
+    {%  for s in users %}
+    <tr>
+        <td>{{s}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
